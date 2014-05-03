@@ -42,5 +42,8 @@ Usage:
 
     There is a test class GenericContentHandlerTest tests both Marshaling / Unmarshaling using Generics.
 
-    
+
+For further details,
+
+http://valliappanr.blogspot.co.uk/2012/08/jaxb-marshalling-unmarshalling-using.html
   
