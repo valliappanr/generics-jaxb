@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+            jxb:version="2.0">
+
+<xsd:element name="Orders">
+<xsd:complexType>
+  <xsd:sequence>
+    <xsd:element name="Order" type="OrderType"
+                 maxOccurs="unbounded"/>
+  </xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+
+<xsd:complexType name="OrderType">
+  <xsd:sequence>
+    <xsd:element name="symbol" type="xsd:string"/>
+    <xsd:element name="size" type="xsd:int"/>
+    <xsd:element name="executionType" type="ExecutionType"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+<xsd:simpleType name="ExecutionType">
+  <xsd:restriction base="xsd:string">
+    <xsd:enumeration value="MARKET_ORDER"/>
+    <xsd:enumeration value="LIMIT_ORDER"/>
+    <xsd:enumeration value="STOP_ORDER"/>
+    <xsd:enumeration value="STOP_LIMIT_ORDER"/>
+  </xsd:restriction>
+</xsd:simpleType>
+</xsd:schema>
